@@ -1,0 +1,3 @@
+ lvalue required as left operand of assignment
+zsh: floating point exception (core dumped)  ./a.out
+

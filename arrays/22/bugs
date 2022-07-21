@@ -1,0 +1,7 @@
+vetor22.cpp: In function ‘int main()’:
+vetor22.cpp:7:29: error: storage size of ‘C’ isn’t known
+    7 |         int A[s]={},B[s]={},C[];
+resposta: tamanho de armazenamento do vetor C[?] desconhecido 
+
+zsh: segmentation fault (core dumped)  ./a.out
+resposta: falha na segmentação ou faltou incremento no laço de repetição especificamente While ++; --; ou certo código em falta
