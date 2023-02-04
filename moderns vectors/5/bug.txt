@@ -1,0 +1,4 @@
+error: 'float' and 'int'
+operador % retorna valor inteiro e vector é real
+certo: 'int' and 'int'
+vector deve ser do tipo que o operador retorna 
