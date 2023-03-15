@@ -1,36 +1,42 @@
+/*
+	Faça um programa que receba do usuário um vetor com 10 posições. Em seguida deverá
+	ser impresso o maior e o menor elemento do vetor.
+*/
+
 #include <iostream>
 #include <vector>
 
-using std::vector;
+using namespace std;
 
 int main(){
-	
-	vector<size_t>nums(10);
-	size_t maior{},menor{};
-	
-	for(size_t i=0;i < nums.size();i++){
-			
-		std::cout<<"Numero"<<i+1<<"-> ";
-		std::cin>>nums.at(i);
-		
-		if(nums.at(i) > maior){
-			maior = nums.at(i);
-		}
-	
-		if (i == nums.size()-1){
-			menor = nums.at(i-1);
-			for(size_t j = 0;j < nums.size();j++){
-			
-				if( nums.at(j) < menor){
-					menor = nums.at(j);
-				}
-	
-			}		
-		}
-	
-	}
-	std::cout<<"Maior: "<<maior;
-	std::cout<<"\nMenor: "<<menor;
 
-return 0;
+	vector<int> values(10);
+	int larger_value{},smaller_value{};
+	
+	for(size_t i = 0;i < values.size();i++){
+		cout<<"Number"<<i+1<<"-> ";
+		cin>>values.at(i);
+		
+		if(values.at(i) > larger_value){
+			larger_value = values.at(i);
+		}
+		
+		if(i == values.size()-1){
+			
+			smaller_value = values.at(i);
+			
+			for(size_t i = 0;i < values.size();i++){
+				
+				if(values.at(i) < smaller_value){
+					
+					smaller_value = values.at(i);			
+				}
+			}
+		}
+	}
+	
+	cout<<"O valor menor e "<<smaller_value<<" e o maior e "<<larger_value;
+	
+	return 0;
 }
+
