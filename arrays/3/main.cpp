@@ -5,16 +5,16 @@ componentes deste vetor, armazenando-o resultado em outro vetor. Os conjuntos t√
 #include <iostream>
 using namespace std;
 int main(){
-	float conjunto[10]={},conjunt[10]={};
-	for(int j =0;j<10;j++){//Lendo n√∫meros
+	float v1[10]={},v2[10]={};
+	for(int j =0;j<10;j++){
 		cout<<"Numero"<<j+1<<": ";
-		cin>>conjunto[j];
+		cin>>v1[j];
 	}
-	for(int j = 0;j<10;j++){//Calculando quadrado e armazenando o resultado no array
-		conjunt[j] = conjunto[j] * conjunto[j];
+	for(int j = 0;j<10;j++){
+		v2[j] = v1[j] * v1[j];
 	}
 	for(int j =0; j<10;j++){
-		cout<<"Conjuntos "<<conjunto[j]<<" = "<<conjunt[j]<<endl;
+		cout<<"Conjuntos "<<v1[j]<<" = "<<v2[j]<<endl;
 	}
 	system("pause");
 	return 0;
