@@ -1,0 +1,1 @@
+39	12	C:\Programação\Ponteiros e Referências C++\exercicio20\exeP20.cpp	[Error] request for member 'data' in 'vet', which is of pointer type 'std::vector<float>*' (maybe you meant to use '->' ?)
