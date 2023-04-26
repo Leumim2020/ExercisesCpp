@@ -37,4 +37,5 @@ int main(){
 	std::cout<<" Maior numero e "<<maior<<"\n Menor numero e "<<menor<<"\n Media e "<<media;
 	
 	return 0;
+	
 }
