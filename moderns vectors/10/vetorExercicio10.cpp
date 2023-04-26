@@ -27,4 +27,5 @@ int main(){
 	std::cout<<"\n Media geral e "<<media/notas.size();
 
 return 0;
+	
 }
