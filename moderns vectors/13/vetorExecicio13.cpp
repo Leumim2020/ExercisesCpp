@@ -35,6 +35,6 @@ int main(){
 	}
 	
 	std::cout<<" Posicao do maior numero->"<<position_maior<<"\n Posicao do menor numero->"<<position_menor;
-	
+
 	return 0;
 }
