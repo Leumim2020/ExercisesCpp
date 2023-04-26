@@ -9,7 +9,6 @@ int main(){
 	
 	vector<int>nums(10);
 	
-	
 	for(size_t i = 0;i <= nums.size()-1;i++){
 		
 		std::cout<<"Number"<<i+1<<"-> ";
@@ -41,7 +40,6 @@ int main(){
 			std::cout<<nums.at(i)<<" ";
 		}
 	}
-	
 	
 	return 0;
 }
