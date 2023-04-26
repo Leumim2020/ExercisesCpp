@@ -9,12 +9,10 @@ int main(){
 	vector<float>nums_r(10);	
 	size_t nRepeated{},nFind{};
 
-	
 	for(size_t i=0;i < nums.size();i++){
 		
 		cout<<"Numero"<<i+1<<"->";
 		cin>>nums.at(i);
-		
 		
 		// Buscando números repetidos no vector nums
 		nRepeated = 0;
@@ -22,12 +20,9 @@ int main(){
 		for(size_t j=0;j < nums.size();j++){
 			
 			if(nums.at(i) == nums.at(j) && i != j){
-				
 				nRepeated++;
-				
 			}
 		}
-		
 			
 		// Buscar número se nRepeated for 1 ou maior que então número se repete 
 		if(nRepeated >= 1){
