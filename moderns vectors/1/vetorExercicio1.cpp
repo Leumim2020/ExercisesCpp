@@ -21,6 +21,5 @@ int main(){
 			std::cout<<"\n Linha"<<i+1<<"-> "<<A.at(i);
 	}
 	
-	return 0;
-	
+	return 0;	
 }
