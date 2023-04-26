@@ -19,5 +19,6 @@ int main(){
 	}
 	std::cout<<"Quantidade de numeros pares: "<<qtd_values_p;
 	
-return 0;	
+	return 0;	
+	
 }
