@@ -25,4 +25,5 @@ int main(){
 	std::cout<<"Quantidade de numeros negativo "<<qtd_negativos<<"\n A soma dos numeros posiitvos e "<<_somaPositivos;
 	
 return 0;
+	
 }
