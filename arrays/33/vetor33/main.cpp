@@ -26,7 +26,7 @@ int main()
     int valor[size],move_back;
 
 
-    // input dados
+   
     for(int i = 0; i < size; i++)
     {
         std::cout<<"Valor"<<i+1<<"-> ";
