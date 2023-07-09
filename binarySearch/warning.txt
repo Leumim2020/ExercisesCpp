@@ -1,0 +1,1 @@
+22	37	C:\Users\Augusto\Saved Games\Documents\VARIEDADE DE MUSICAS DO ANO 2018\Desktop\moderns vectors\binarySearch\algorithm_binary_search.cpp	[Warning] use of 'auto' in parameter declaration only available with '-fconcepts'
