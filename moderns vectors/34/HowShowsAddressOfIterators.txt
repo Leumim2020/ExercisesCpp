@@ -1,0 +1,3 @@
+float *ptr;
+ptr = &(*it);
+std::cout << ptr;
