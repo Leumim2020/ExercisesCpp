@@ -1,27 +1,24 @@
 #include <iostream>
-#include <ios>
-#include <limits>
 #include <string>
+#define size 2
 
 struct person {
-	std::string nome[2];
-	int idade [2];	
+	std::string name[size];
+	unsigned short age[size];	
 }p1;
 
 int main(){
 
-	for(int i = 0; i < 2; ++i){
+	for(unsigned i = 0; i < size; ++i){
 		std::cout << "Name" << i+1 << "-> ";
-		std::getline(std::cin,p1.nome[i]);
+		std::getline(std::cin,p1.name[i]);
 		std::cout << "Age" << i+1 << "-> ";	
-		std::cin >> p1.idade[i];
+		std::cin >> p1.age[i];
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');	
-		std::cout << std::endl;
-	
 	}
 	
-	for(int i = 0;i < 2; ++i)
-		std::cout << "Person" << i+1 << "-> " << p1.nome[i] << " age " << p1.idade[i] << std::endl;
+	for(unsigned i = 0;i < size; ++i)
+		std::cout << "Person" << i+1 << "-> " << p1.name[i] << " age " << p1.age[i] << std::endl;
 		
 	return 0;	
 }
