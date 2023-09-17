@@ -1,44 +1,57 @@
-#include <limits>
 #include <iostream>
 #include <vector>
 #include <string>
 
-struct word{
-	std::string people,rua;
-	int age;
-};
+struct PEOPLE{
+	std::string name,address,phonenumber;
+}aux;
+
+bool validate(PEOPLE &PLP);
 
 int main(){
 	
-	std::vector <word> w1(2);
+	std::vector <PEOPLE> p(5);
 
-	for(auto i = 0; i < w1.size(); ++i){
-		std::cout << "Name: ";
-		std::getline(std::cin,w1.at(i).people);
-		std::cout << "Street: ";
-		std::getline(std::cin,w1.at(i).rua);
-		std::cout << "Age: ";
-		std::cin >> w1.at(i).age;
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-
+	for(auto i = 0; i < p.size();){
+		std::cout << "\nName: ";
+		std::getline(std::cin,p.at(i).name);
+		std::cout << "Address: ";
+		std::getline(std::cin,p.at(i).address);
+		std::cout << "Phone number(+244): ";
+		std::getline(std::cin,p.at(i).phonenumber);
+		
+		if(validate(p.at(i))){++i;}
+		else{
+			std::cout << std::endl << "--------------------------------------------------------------";
+			std::cout << std::endl << "Warnning::You not typed data the correct way (max_length)" << std::endl 
+								   << "           breaked Name(50), Address(20), Phone(9) " << std::endl;
+			std::cout << "--------------------------------------------------------------" << std::endl;
+		}
 	}
 	
-	w1.at(0) = w1.at(1);
-	
-	/*for(auto i = 0; i < w1.size(); ++i){
-		for(auto j = 0; j < w1.size(); ++j){
-			if(w1.at(i).people.at(0) < w1.at(j).people.at(0)){
-				std::string change = w1.at(i).people;
-				w1.at(i).people = w1.at(j).people;
-				w1.at(j).people = change;
+	for(auto i = 0; i < p.size(); ++i){
+		for(auto j = 0; j < p.size(); ++j){
+			if(p.at(i).name.at(0) < p.at(j).name.at(0)){
+				aux = p.at(i);
+				p.at(i) = p.at(j);
+				p.at(j) = aux;
 			}
 		}
 	}
-	*/
-	std:: cout << "----------------------------------\n";
-	for(auto i = 0; i < w1.size(); ++i)
-		std::cout << w1.at(i).people << " " << w1.at(i).rua << " " << w1.at(i).age << " " <<std::endl;
 	
+	std:: cout << "----------------------------------\n";
+	for(auto i = 0; i < p.size(); ++i){
+		std::cout << "Name: " << p.at(i).name << " Address: " << p.at(i).address << " Phone Number: (+244) " 
+											 << p.at(i).phonenumber << std::endl;
+	}
 	
 	return 0;
+}
+
+bool validate(PEOPLE &PLP){	
+	
+	if(PLP.name.length() > 50 || PLP.address.length() > 20 || PLP.phonenumber.length() > 9)
+		return 0;
+	else
+		return 1;
 }
