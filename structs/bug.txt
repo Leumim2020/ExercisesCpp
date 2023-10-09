@@ -1,0 +1,3 @@
+//../test/test.o:test.cpp:(.text+0x1fa): multiple definition of `main'; ../test/main.o:C:\Users\HP\Documents\C++ Projects\1/../test/main.cpp:3: first defined here
+Este erro é retornado por uma mesma função em dois ou mais arquivos neste caso a função main() está duplicada em test.cpp e no main.cpp.
+Deve se remover ou alterar a função.
