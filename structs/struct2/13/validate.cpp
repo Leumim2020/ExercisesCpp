@@ -52,7 +52,10 @@ std::string month(unsigned short &usmonth){
 			break;
 			
 		case 12:
-			return "Dezembro";			
+			return "Dezembro";		
+		
+		default:
+			return " ";
 			
 	}
 }
@@ -63,7 +66,7 @@ void validateBirthday(unsigned short &usday,unsigned short &usmonth,unsigned sho
 	std::time_t T = std::time(nullptr);
 	std::tm* T_CORRENTLY = std::localtime(&T);
 	
-	if(((T_CORRENTLY->tm_year + _BEGINYEAR) <= usyear)){
+	if((T_CORRENTLY->tm_year + _BEGINYEAR) <= usyear){
 		std::cout << "-------------------------------------------" << std::endl;
 		std::cout << "Warnning::Year '" << usyear << "' typed is not valid" << std::endl;
 		usyear=!usyear;
