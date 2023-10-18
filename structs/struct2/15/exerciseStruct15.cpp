@@ -11,7 +11,7 @@ int main(){
 	std::vector <BOOK> book(5); 
 	char currentlytitle[_titleW];
 	
-	for(auto i = 0; i < book.size(); ++i){
+	for(size_t i = 0; i < book.size(); ++i){
 		
 		std::cout << "Title book max length(30): ";
 		std::cin.getline(book.at(i).title,_titleW);
