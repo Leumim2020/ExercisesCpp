@@ -69,9 +69,9 @@ void validate_date(unsigned short &usday,unsigned short &usmonth,unsigned short 
 	std::time_t T = std::time(nullptr);
 	std::tm* T_CORRENTLY = std::localtime(&T);
 	
-	if(((T_CORRENTLY->tm_year + _BEGINYEAR) <= usyear)){
+	if((T_CORRENTLY->tm_year + _BEGINYEAR) > usyear){
 		std::cout << "-------------------------------------------" << std::endl;
-		std::cout << "Warnning::Year '" << usyear << "' typed is not valid" << std::endl;
+		std::cout << "Warnning::Year '" << usyear << "' typed is not valid you can't market comprimisse on past" << std::endl;
 		usyear=!usyear;
 	}
 
@@ -127,9 +127,29 @@ void validate_date(unsigned short &usday,unsigned short &usmonth,unsigned short 
 		default:
 			if(usmonth > 12){
 				std::cout << std::endl <<"Warnning::Month '" << usmonth << "' is not valid or not correspond with a month from the year" << std::endl;
-				std::cout << "-------------------------------------------" << std::endl;
+				std::cout <<"-------------------------------------------" << std::endl;
 				usmonth = !usmonth;
 			}				
 	}
 	
+}
+
+void validate_comprimisse(std::vector <COMPRIMISSE> *vcompromisse,unsigned short &usmonth, unsigned short &usyear){
+			
+	size_t j = 0;
+	
+	std::cout << "---------------------------------" << std::endl;
+	while(j < vcompromisse->size()){
+		if(usmonth == vcompromisse->at(j).comprimissedate.month && usyear == vcompromisse->at(j).comprimissedate.year){
+			std::cout << std::endl 
+					  << "Comprimisse name: " << vcompromisse->at(j).comprimissename 
+					  << std::endl
+			          << "Date: " << vcompromisse->at(j).comprimissedate.day
+					  << "/ " << month(vcompromisse->at(j).comprimissedate.month) << " /"
+					  << vcompromisse->at(j).comprimissedate.year;
+		}
+	++j;
+	}
+	std::cout << std::endl 
+	<< "---------------------------------" << std::endl;
 }
