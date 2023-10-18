@@ -9,7 +9,7 @@ int main(int argc,char *argv[]){
 
 	std::vector <CAR> vcar(5);	
 	
-	for(auto i = 0; i < vcar.size(); ++i){
+	for(size_t i = 0; i < vcar.size(); ++i){
 		std::cout << "Type Mark of the Car: ";
 		std::cin.getline(vcar.at(i).mark,_markW);
 		std::cout << "Type Year of the Car: ";

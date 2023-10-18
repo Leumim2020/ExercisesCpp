@@ -1,4 +1,4 @@
-#define _markW 16;
+#define _markW 16
 
 struct CAR{
 	char mark[_markW];
@@ -8,7 +8,7 @@ struct CAR{
 
 void searchcheapcar(std::vector <CAR> *scar){
 	
-	auto j = 0;
+	size_t j = 0;
 	double dprice{};
 	
 	while(true){
